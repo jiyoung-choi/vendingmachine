@@ -34,6 +34,15 @@ def unknow_output():
 # 각 테스트는 최소한 겹치지 않도록 만드는 게 가장 중요합니다.
 # 테스트는 실행 순서와 결과와 상관 없이 테스트가 서로 간섭을 받지 않아야합니다. - init()
 
+def test_valid_coins():
+    m = VendingMachine()
+    valid_coins = ["10", "50", "100", "500"]
+    assert ""
+
+def test_invalid_coins():
+    m = VendingMachine
+
+
 def test_short():
     m = VendingMachine()
     m.run("동전 100")
@@ -49,3 +58,7 @@ def test_unknown_drink():
     m = VendingMachine()
     m.run("동전 500")
     assert "알 수 없는 음료입니다." == m.run("음료 맥주")
+
+def test_unknown_coin():
+    m = VendingMachine()
+    assert "알 수 없는 동전입니다." == m.run("동전 15")

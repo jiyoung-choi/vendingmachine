@@ -22,6 +22,10 @@ class VendingMachine:
             return "잔액은 " + str(self._change) + "원입니다."
         elif cmd == "동전":
             coin = params[0]
+            unknown_coins = ["10", "50", "100", "500"]
+            if coin != known_coins:
+                return "알 수 없는 동전입니다."
+            
             self._change += int(coin)
             # change = change + int(coin)과 같은 말.
             return coin + "원을 넣었습니다."
