@@ -7,7 +7,6 @@ class VendingMachine:
     def __init__(self):
         self._change = 0
 
-#
 
     def run(self, raw):
         tokens = raw.split(" ")

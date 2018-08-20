@@ -6,12 +6,13 @@
 # 관습적으로 앞에(3)이 내가 기대하는 값,
 # 뒤에(1 + 2)가 실행하는값으로 씁니다.
 
+
 from vm import *
 
 
 def test_initial_change_should_be_zero():
     m = VendingMachine()
-    
+
 # VendingMachine 인스턴스가 생성
 
     assert "잔액은 0원입니다." == m.run("잔액")
